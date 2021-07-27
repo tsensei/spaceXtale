@@ -1,0 +1,66 @@
+.main {
+  background-image: url("../../assets/starlink-bg.jpeg");
+}
+
+.starlink__content {
+  z-index: 1;
+  padding: 0 20rem 0 10rem;
+}
+
+.starlink__content p:nth-child(1) {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.starlink__content p:nth-child(2) {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.starlink__content p:nth-child(3) {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.starlink__content p:nth-child(4) {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 2rem 0;
+}
+
+.starlink__button::before {
+  width: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.starlink__button:hover::before {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .starlink__content {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .starlink__content {
+    padding: 1rem;
+    font-weight: 300;
+  }
+  .starlink__content p:nth-child(1) {
+    font-size: 2.5rem;
+  }
+
+  .starlink__content p:nth-child(2) {
+    font-size: 1.6rem;
+  }
+
+  .starlink__content p:nth-child(3) {
+    font-size: 1.3rem;
+  }
+
+  .starlink__content p:nth-child(4) {
+    font-size: 1rem;
+  }
+}

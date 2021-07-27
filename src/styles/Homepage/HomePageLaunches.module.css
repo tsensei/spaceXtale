@@ -1,0 +1,60 @@
+.main {
+  background-image: url("../../assets/launches-bg.jpg");
+}
+
+.launches__content {
+  z-index: 1;
+  width: 100%;
+  padding: 10rem;
+}
+
+.launches__content p:nth-child(1) {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.launches__content p:nth-child(2),
+.launches__content p:nth-child(3) {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.launches__content p:nth-child(4) {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.launches__button::before {
+  width: 100%;
+  bottom: -100%;
+}
+
+.launches__button:hover::before {
+  bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .launches__content {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .launches__content {
+    padding: 1rem;
+    font-weight: 300;
+  }
+
+  .launches__content p:nth-child(1) {
+    font-size: 2.5rem;
+  }
+
+  .launches__content p:nth-child(2),
+  .launches__content p:nth-child(3) {
+    font-size: 1.6rem;
+  }
+
+  .launches__content p:nth-child(4) {
+    font-size: 1rem;
+  }
+}

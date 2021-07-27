@@ -1,0 +1,30 @@
+.loadingScreen {
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingScreen svg {
+  height: 20vw;
+  width: 20vw;
+  animation: loadingAnimate 4s linear infinite alternate;
+}
+
+@keyframes loadingAnimate {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .loadingScreen svg {
+    height: 50vw;
+    width: 50vw;
+  }
+}
