@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/spaceXtale/static/css/main.b71a2ada.chunk.css",
-    "main.js": "/spaceXtale/static/js/main.a1c72d35.chunk.js",
-    "main.js.map": "/spaceXtale/static/js/main.a1c72d35.chunk.js.map",
+    "main.css": "/spaceXtale/static/css/main.0d4a42f9.chunk.css",
+    "main.js": "/spaceXtale/static/js/main.e3d4e7a1.chunk.js",
+    "main.js.map": "/spaceXtale/static/js/main.e3d4e7a1.chunk.js.map",
     "runtime-main.js": "/spaceXtale/static/js/runtime-main.e9d6237d.js",
     "runtime-main.js.map": "/spaceXtale/static/js/runtime-main.e9d6237d.js.map",
-    "static/js/2.0ee49110.chunk.js": "/spaceXtale/static/js/2.0ee49110.chunk.js",
-    "static/js/2.0ee49110.chunk.js.map": "/spaceXtale/static/js/2.0ee49110.chunk.js.map",
+    "static/js/2.bcfb6f8d.chunk.js": "/spaceXtale/static/js/2.bcfb6f8d.chunk.js",
+    "static/js/2.bcfb6f8d.chunk.js.map": "/spaceXtale/static/js/2.bcfb6f8d.chunk.js.map",
     "index.html": "/spaceXtale/index.html",
-    "static/css/main.b71a2ada.chunk.css.map": "/spaceXtale/static/css/main.b71a2ada.chunk.css.map",
-    "static/js/2.0ee49110.chunk.js.LICENSE.txt": "/spaceXtale/static/js/2.0ee49110.chunk.js.LICENSE.txt",
+    "static/css/main.0d4a42f9.chunk.css.map": "/spaceXtale/static/css/main.0d4a42f9.chunk.css.map",
+    "static/js/2.bcfb6f8d.chunk.js.LICENSE.txt": "/spaceXtale/static/js/2.bcfb6f8d.chunk.js.LICENSE.txt",
     "static/media/failed.e8fbabf9.svg": "/spaceXtale/static/media/failed.e8fbabf9.svg",
     "static/media/HomePageHero.module.css": "/spaceXtale/static/media/hero-bg.86637811.jpg",
     "static/media/HomePageLaunches.module.css": "/spaceXtale/static/media/launches-bg.c086fb73.jpg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e9d6237d.js",
-    "static/js/2.0ee49110.chunk.js",
-    "static/css/main.b71a2ada.chunk.css",
-    "static/js/main.a1c72d35.chunk.js"
+    "static/js/2.bcfb6f8d.chunk.js",
+    "static/css/main.0d4a42f9.chunk.css",
+    "static/js/main.e3d4e7a1.chunk.js"
   ]
 }
