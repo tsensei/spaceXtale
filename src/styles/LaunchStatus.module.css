@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+}
+
+.main svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 5px;
+}

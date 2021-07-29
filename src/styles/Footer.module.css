@@ -10,7 +10,7 @@
 
 .main a {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 111, 185);
 }
 
 @media screen and (max-width: 800px) {

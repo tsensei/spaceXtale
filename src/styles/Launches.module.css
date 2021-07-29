@@ -1,0 +1,9 @@
+.launches__header {
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.launches__latest {
+  display: flex;
+}

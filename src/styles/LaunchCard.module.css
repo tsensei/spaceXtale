@@ -1,0 +1,99 @@
+.launch__card {
+  min-height: 20rem;
+  background-color: rgb(16, 16, 16);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  margin: 2rem 0;
+  text-decoration: none;
+  color: white;
+}
+
+.launch__card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.launch__card > div:nth-child(1) {
+  flex: 1;
+}
+
+.launch__card > div:nth-child(2) {
+  width: 15rem;
+  align-items: flex-end;
+}
+
+.launch__card__name {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  color: rgb(0, 111, 185);
+}
+
+.launch__card__date {
+  font-size: 14px;
+}
+
+.launch__card__details {
+  margin: 1rem 0;
+}
+
+.launch__card__patch {
+  width: 70%;
+}
+
+.launch__card__status > div:nth-child(1) {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  color: rgb(0, 111, 185);
+}
+
+.launch__card__statusLogo {
+  display: flex;
+}
+
+.launch__card__statusLogo svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 6px;
+}
+
+.launch__card__number {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.launch__card__date,
+.launch__card__details,
+.launch__card__number {
+  color: rgb(190, 192, 196);
+}
+
+@media screen and (max-width: 800px) {
+  .launch__card {
+    flex-direction: column;
+  }
+
+  .launch__card > div {
+    width: 100%;
+  }
+  .launch__card > div:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+
+  .launch__card > div:nth-child(2) {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .launch__card__patch {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .launch__card__details {
+    line-height: 1.2;
+  }
+}

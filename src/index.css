@@ -13,11 +13,20 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 #root {
   position: relative;
 }
 
 /* Common Styles for components */
+
+.container {
+  padding: 10rem 20rem;
+  min-height: 100vh;
+}
 
 .bg-overlay {
   min-height: 100vh;
@@ -67,11 +76,122 @@ body {
   color: black;
 }
 
+.toolTip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolTipText {
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: black;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: all 400ms;
+}
+
+.toolTip:hover .toolTipText {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bb__table {
+  width: 70%;
+  margin: 3rem auto;
+}
+
+.bb__table__header {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.bb__table__row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  padding: 6px 0;
+}
+
+.bb__table__row p:nth-child(2) {
+  text-align: right;
+  margin-left: 2rem;
+}
+
+.social__links__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 1rem;
+}
+
+.social__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6rem;
+  width: 6rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 1rem;
+  transition: all 400ms;
+  font-weight: 300;
+}
+
+.social__link:hover {
+  background-color: rgb(16, 16, 16);
+}
+
+.social__link svg {
+  margin-bottom: 4px;
+}
+
 /* Common Styles for components */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 10rem 7rem;
+  }
+  .bb__table {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 10rem 3rem;
+  }
+
+  .bb__table {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 10rem 1rem;
+  }
+
   .btn {
     padding: 12px 18px;
     border: 1px solid white;
+  }
+
+  .bb__table {
+    width: 100%;
+  }
+
+  .bb__table__header {
+    font-size: 1.75rem;
+  }
+
+  .bb__table__row {
+    font-size: 1.1rem;
   }
 }

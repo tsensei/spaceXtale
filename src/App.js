@@ -4,12 +4,19 @@ import { DataContext } from "./providers/DataContext";
 import Loading from "./components/Loading";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
+import Launches from "./components/Launches";
+import Launch from "./components/Launch";
 import Footer from "./components/Footer";
 
 const App = () => {
   const data = useContext(DataContext);
 
-  if (!data.launchesPast || !data.launchesUpcoming || !data.rockets) {
+  if (
+    !data.launchesPast ||
+    !data.launchesUpcoming ||
+    !data.rockets ||
+    !data.starman
+  ) {
     return <Loading />;
   }
   return (
@@ -23,10 +30,10 @@ const App = () => {
           <HomePage />
         </Route>
         <Route exact path="/launches">
-          <h1>Launches</h1>
+          <Launches />
         </Route>
         <Route path="/launch/:id">
-          <h1>Specific Launch</h1>
+          <Launch />
         </Route>
         <Route exact path="/rockets">
           <h1>Rockets</h1>

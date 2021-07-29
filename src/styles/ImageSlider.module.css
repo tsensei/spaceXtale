@@ -1,0 +1,77 @@
+.main {
+  margin: 4rem 0;
+}
+
+.slider__container {
+  width: 75%;
+  height: 70vh;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__container img {
+  height: 100%;
+  width: 100%;
+}
+
+.slider__controls {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider__controls__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.slider__controls__buttons button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.slider__controls__buttons button:hover svg {
+  fill: rgb(0, 111, 185);
+}
+
+.slider__controls__buttons button svg {
+  height: 2rem;
+  width: 2rem;
+  transition: all 300ms;
+}
+
+.slider__position__tracker {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+}
+
+.tracker__circle {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 6px;
+  transition: background-color 300ms;
+}
+
+.circle__active {
+  background-color: rgb(0, 111, 185);
+}
+
+@media screen and (max-width: 800px) {
+  .slider__container {
+    width: 100%;
+    height: 60vh;
+  }
+}

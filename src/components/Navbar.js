@@ -7,7 +7,10 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.nav__logo}>spaceXtale</div>
-      <div className={`${styles.nav__main} ${active && styles.nav__active}`}>
+      <div
+        onClick={(a) => setActive(!a)}
+        className={`${styles.nav__main} ${active && styles.nav__active}`}
+      >
         <NavLink
           to="/homepage"
           activeClassName={styles.nav__item__active}

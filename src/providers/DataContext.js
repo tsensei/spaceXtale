@@ -30,16 +30,30 @@ export const DataProvider = ({ children }) => {
 
       const starData = await starResponse.json();
 
-      setLaunchesPast(lpData);
+      setLaunchesPast(lpData.reverse());
       setLaunchesUpcoming(luData);
       setRockets(rData);
       setStarman(starData);
+      console.log({
+        past: lpData,
+        upcoming: luData,
+        rockets: rData,
+      });
     })();
   }, []);
 
   return (
     <DataContext.Provider
-      value={{ launchesPast, launchesUpcoming, rockets, starman }}
+      value={{
+        launchesPast,
+        launchesUpcoming,
+        rockets,
+        starman,
+        launchesAll:
+          launchesPast && launchesUpcoming
+            ? [...launchesPast, ...launchesUpcoming]
+            : [],
+      }}
     >
       {children}
     </DataContext.Provider>

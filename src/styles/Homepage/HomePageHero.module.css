@@ -40,6 +40,7 @@
 @media screen and (max-width: 800px) {
   .hero {
     min-height: 100vh;
+    padding: 0 1rem;
   }
   .heroContent {
     height: 45vh;

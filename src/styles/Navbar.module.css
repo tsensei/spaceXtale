@@ -1,7 +1,7 @@
 .nav__main {
   width: 100%;
   position: absolute;
-  z-index: 100;
+  z-index: 50;
   font-size: 2rem;
   font-weight: 100;
   display: flex;
@@ -34,7 +34,7 @@
   transition: width 0.3s;
 }
 
-:not(.nav__item__active):hover::after {
+.nav__item:not(.nav__item__active):hover::after {
   width: 100%;
 }
 
@@ -106,7 +106,7 @@
     outline: none;
     border: none;
     border-radius: 2rem;
-    z-index: 111;
+    z-index: 70;
   }
 
   .nav__toggler svg {
