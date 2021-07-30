@@ -46,6 +46,7 @@
 
 .starlink__card__header {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.2rem;
@@ -106,8 +107,13 @@
     width: 100%;
   }
 
+  .starlink__card__header {
+    flex-wrap: wrap;
+  }
+
   .starlink__card__header p:nth-child(1) {
     font-size: 1.5rem;
+    padding-right: 2rem;
   }
 
   .starlink__card__header p:nth-child(1)::after {
