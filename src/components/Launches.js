@@ -7,7 +7,6 @@ const Launches = () => {
   const page = useRef(1);
   const dataPerPage = 5;
   const { launchesPast, launchesUpcoming } = useContext(DataContext);
-  console.log(launchesPast);
   const [launchesToShow, setLaunchesToShow] = useState(
     [...launchesPast].slice(1, dataPerPage + 1)
   );

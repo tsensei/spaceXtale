@@ -8,6 +8,7 @@ import Launches from "./components/Launches";
 import Launch from "./components/Launch";
 import Footer from "./components/Footer";
 import Starlink from "./components/Starlink";
+import Rockets from "./components/Rockets";
 
 const App = () => {
   const data = useContext(DataContext);
@@ -38,7 +39,7 @@ const App = () => {
           <Launch />
         </Route>
         <Route exact path="/rockets">
-          <h1>Rockets</h1>
+          <Rockets />
         </Route>
         <Route path="/rocket/:id">
           <h1>Specific Rocket</h1>

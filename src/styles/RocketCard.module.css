@@ -1,0 +1,82 @@
+.rocket__card {
+  display: flex;
+  color: white;
+  background-color: rgb(12, 14, 16);
+  margin: 2rem auto;
+  border-radius: 12px;
+}
+
+.rocket__card__image {
+  height: 20rem;
+  width: 20rem;
+}
+
+.rocket__card__image img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.rocket__card__data {
+  display: flex;
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+.rocket__card__description {
+  flex: 2;
+}
+
+.rocket__card__description p:nth-child(1) {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgb(0, 111, 185);
+  margin-bottom: 0.5rem;
+}
+
+.rocket__card__description p:nth-child(2) {
+  color: rgb(190, 192, 196);
+  line-height: 1.4;
+}
+
+.rocket__card__stats {
+  flex: 1;
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.rocket__card__stats tr {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.rocket__card__stats tr td:first-child {
+  color: rgb(190, 192, 196);
+}
+
+@media screen and (max-width: 800px) {
+  .rocket__card {
+    flex-direction: column;
+  }
+
+  .rocket__card__image {
+    width: 100%;
+  }
+
+  .rocket__card__image img {
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+  }
+
+  .rocket__card__data {
+    flex-direction: column;
+  }
+
+  .rocket__card__stats {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+}

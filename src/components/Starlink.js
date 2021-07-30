@@ -24,7 +24,6 @@ const Starlink = () => {
         body: JSON.stringify(query(0, dataPerPage)),
       });
       const result = await res.json();
-      console.log(result);
       setStarlinkData(result.docs);
     })();
   }, [query]);
@@ -44,10 +43,6 @@ const Starlink = () => {
       setStarlinkData((d) => [...d, ...result.docs]);
     })();
   }, [page]);
-
-  useEffect(() => {
-    console.log(starlinkData);
-  }, [starlinkData]);
 
   const loader = useCallback((node) => {
     var options = {

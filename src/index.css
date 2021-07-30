@@ -212,6 +212,10 @@ a {
     padding: 10rem 1rem;
   }
 
+  .toolTipText {
+    padding: 4px 6px;
+  }
+
   .btn {
     padding: 12px 18px;
     border: 1px solid white;
