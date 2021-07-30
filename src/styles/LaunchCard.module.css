@@ -88,6 +88,10 @@
     flex-direction: row;
   }
 
+  .launch__card__name {
+    font-size: 2.3rem;
+  }
+
   .launch__card__patch {
     height: 5rem;
     width: 5rem;

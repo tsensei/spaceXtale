@@ -73,6 +73,11 @@
 
   .rocket__card__data {
     flex-direction: column;
+    padding: 1rem;
+  }
+
+  .rocket__card__description p:nth-child(1) {
+    font-size: 2.3rem;
   }
 
   .rocket__card__stats {
