@@ -168,14 +168,26 @@ a {
 }
 
 .status__active::after {
-  background-color: green;
+  background-color: #46ac5e;
 }
 
 .status__inactive::after {
   background-color: red;
 }
 
+.scroll__loader {
+  font-size: 300;
+  font-size: 2rem;
+  text-align: center;
+}
+
 /* Common Styles for components */
+
+@media screen and (max-width: 1600px) {
+  .container {
+    padding: 10rem 14rem;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .container {

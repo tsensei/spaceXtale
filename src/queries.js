@@ -44,25 +44,27 @@ export const launch_query = (id) => {
     },
   };
 };
+const select = {
+  latitude: 1,
+  longitude: 1,
+  height_km: 1,
+  velocity_kms: 1,
+  "spaceTrack.OBJECT_NAME": 1,
+  "spaceTrack.OBJECT_ID": 1,
+  "spaceTrack.REV_AT_EPOCH": 1,
+  "spaceTrack.LAUNCH_DATE": 1,
+  "spaceTrack.DECAY_DATE": 1,
+  "spaceTrack.DECAYED": 1,
+  "spaceTrack.PERIOD": 1,
+  "spaceTrack.EPOCH": 1,
+};
 
 export const starlink_query_all = (offset, limit) => {
   return {
     options: {
       offset: offset,
       limit: limit,
-      select: {
-        latitude: 1,
-        longitude: 1,
-        height_km: 1,
-        velocity_kms: 1,
-        "spaceTrack.OBJECT_NAME": 1,
-        "spaceTrack.REV_AT_EPOCH": 1,
-        "spaceTrack.LAUNCH_DATE": 1,
-        "spaceTrack.DECAY_DATE": 1,
-        "spaceTrack.DECAYED": 1,
-        "spaceTrack.PERIOD": 1,
-        "spaceTrack.EPOCH": 1,
-      },
+      select: select,
     },
   };
 };
@@ -77,19 +79,7 @@ export const starlink_query_active = (offset, limit) => {
     options: {
       offset: offset,
       limit: limit,
-      select: {
-        latitude: 1,
-        longitude: 1,
-        height_km: 1,
-        velocity_kms: 1,
-        "spaceTrack.OBJECT_NAME": 1,
-        "spaceTrack.REV_AT_EPOCH": 1,
-        "spaceTrack.LAUNCH_DATE": 1,
-        "spaceTrack.DECAY_DATE": 1,
-        "spaceTrack.DECAYED": 1,
-        "spaceTrack.PERIOD": 1,
-        "spaceTrack.EPOCH": 1,
-      },
+      select: select,
     },
   };
 };
@@ -104,19 +94,7 @@ export const starlink_query_inactive = (offset, limit) => {
     options: {
       offset: offset,
       limit: limit,
-      select: {
-        latitude: 1,
-        longitude: 1,
-        height_km: 1,
-        velocity_kms: 1,
-        "spaceTrack.OBJECT_NAME": 1,
-        "spaceTrack.REV_AT_EPOCH": 1,
-        "spaceTrack.LAUNCH_DATE": 1,
-        "spaceTrack.DECAY_DATE": 1,
-        "spaceTrack.DECAYED": 1,
-        "spaceTrack.PERIOD": 1,
-        "spaceTrack.EPOCH": 1,
-      },
+      select: select,
     },
   };
 };

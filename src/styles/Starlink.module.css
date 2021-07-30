@@ -4,29 +4,22 @@
   text-align: center;
 }
 
-.starlink__card__grid {
+.starlink__select__header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 60%;
+  margin: 3rem auto;
+  justify-content: space-between;
+  font-weight: 300;
 }
 
-.starlink__card {
-  margin: 1rem;
-  background-color: rgb(12, 14, 16);
-  width: 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-.starlink__card p:first-child {
+.starlink__select__header div p:nth-child(1) {
   font-size: 2rem;
+  margin-bottom: 4px;
 }
 
-.starlink__card p:first-child::after {
-  margin: 15px 6px;
+.starlink__select__header div p:nth-child(2) {
+  font-size: 1.3rem;
+  color: rgb(190, 192, 196);
 }
 
 .status__select {
@@ -35,6 +28,103 @@
   color: white;
   font-size: 1.2rem;
   padding: 1rem 2rem;
-  margin: 0 auto;
   display: block;
+}
+
+.starlink__card {
+  margin: 1rem;
+  background-color: rgb(12, 14, 16);
+  /* width: 20rem; */
+  width: 60%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  min-height: 13rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.starlink__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.starlink__card__header p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.starlink__card__header p:nth-child(1)::after {
+  margin: 15px 8px;
+}
+
+.starlink__card__header p:nth-child(2) {
+  font-size: 1.2rem;
+  color: rgb(190, 192, 196);
+}
+
+.starlink__card__data {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+}
+
+.starlink__card__table {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.starlink__card__table tr {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.starlink__card__table tr td:nth-child(1) {
+  color: rgb(190, 192, 196);
+}
+
+@media screen and (max-width: 1200px) {
+  .starlink__card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .starlink__select__header {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .status__select {
+    margin: 1rem 0;
+  }
+  .starlink__card {
+    width: 100%;
+  }
+
+  .starlink__card__header p:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .starlink__card__header p:nth-child(1)::after {
+    margin: 10.5px 4px;
+  }
+
+  .starlink__card__header p:nth-child(2) {
+    font-size: 1.1rem;
+  }
+
+  .starlink__card__data {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .starlink__card__table {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
 }
