@@ -1,4 +1,5 @@
-const unixToLocal = (unix) => {
+const unixToLocal = (target, dateString) => {
+  let dateObject;
   const monthArray = [
     "Jan",
     "Feb",
@@ -13,7 +14,11 @@ const unixToLocal = (unix) => {
     "Nov",
     "Dec",
   ];
-  const dateObject = new Date(unix * 1000);
+  if (dateString) {
+    dateObject = new Date(target);
+  } else {
+    dateObject = new Date(target * 1000);
+  }
 
   const date = dateObject.getDate();
   const month = monthArray[dateObject.getMonth()];

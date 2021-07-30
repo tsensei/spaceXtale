@@ -7,6 +7,7 @@ export const DataProvider = ({ children }) => {
   const [launchesUpcoming, setLaunchesUpcoming] = useState(null);
   const [rockets, setRockets] = useState(null);
   const [starman, setStarman] = useState(null);
+  const [starlinkLength, setStarlinkLength] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -24,21 +25,34 @@ export const DataProvider = ({ children }) => {
         await fetch("https://api.spacexdata.com/v4/rockets")
       ).json();
 
-      const starResponse = await fetch(
+      const starmanResponse = await fetch(
         "https://api.spacexdata.com/v4/roadster/"
       );
 
-      const starData = await starResponse.json();
+      const starmanData = await starmanResponse.json();
+
+      const starlinkQueryResponse = await fetch(
+        "https://api.spacexdata.com/v4/starlink/query",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            options: {
+              limit: "0",
+            },
+          }),
+        }
+      );
+
+      const starlinkData = await starlinkQueryResponse.json();
 
       setLaunchesPast(lpData.reverse());
       setLaunchesUpcoming(luData);
       setRockets(rData);
-      setStarman(starData);
-      console.log({
-        past: lpData,
-        upcoming: luData,
-        rockets: rData,
-      });
+      setStarman(starmanData);
+      setStarlinkLength(starlinkData.totalDocs);
     })();
   }, []);
 
@@ -49,6 +63,7 @@ export const DataProvider = ({ children }) => {
         launchesUpcoming,
         rockets,
         starman,
+        starlinkLength,
         launchesAll:
           launchesPast && launchesUpcoming
             ? [...launchesPast, ...launchesUpcoming]

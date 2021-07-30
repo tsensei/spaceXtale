@@ -105,8 +105,8 @@ const Ship = ({ data }) => (
     </div>
     <div>
       <p
-        className={`${styles.status} ${
-          data.active ? styles.status__active : styles.status__inactive
+        className={`status ${
+          data.active ? "status__active" : "status__inactive"
         }`}
       >
         {data.name}

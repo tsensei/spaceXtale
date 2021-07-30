@@ -106,7 +106,7 @@
 
 .launch__ship p:nth-child(1) {
   font-size: 1.2rem;
-  margin: 0 2px;
+  margin: 2px 0;
 }
 
 .launch__ship img {
@@ -114,28 +114,6 @@
   width: 22rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-}
-
-.status {
-  position: relative;
-}
-
-.status::after {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  margin: 7.5px;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 50%;
-}
-
-.status__active::after {
-  background-color: green;
-}
-
-.status__inactive::after {
-  background-color: red;
 }
 
 .youtubeWrapper {

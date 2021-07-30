@@ -153,6 +153,28 @@ a {
   margin-bottom: 4px;
 }
 
+.status {
+  position: relative;
+}
+
+.status::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  margin: 7.5px;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+}
+
+.status__active::after {
+  background-color: green;
+}
+
+.status__inactive::after {
+  background-color: red;
+}
+
 /* Common Styles for components */
 
 @media screen and (max-width: 1200px) {

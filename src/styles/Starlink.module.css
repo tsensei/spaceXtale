@@ -1,0 +1,40 @@
+.starlink__header {
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.starlink__card__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.starlink__card {
+  margin: 1rem;
+  background-color: rgb(12, 14, 16);
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.starlink__card p:first-child {
+  font-size: 2rem;
+}
+
+.starlink__card p:first-child::after {
+  margin: 15px 6px;
+}
+
+.status__select {
+  background: rgb(12, 14, 16);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  display: block;
+}
