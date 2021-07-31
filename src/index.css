@@ -128,7 +128,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2rem 1rem;
+  margin: 6rem 1rem;
 }
 
 .social__link {
@@ -181,6 +181,15 @@ a {
   text-align: center;
 }
 
+select {
+  background: rgb(12, 14, 16);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  display: block;
+}
+
 /* Common Styles for components */
 
 @media screen and (max-width: 1600px) {
@@ -231,5 +240,16 @@ a {
 
   .bb__table__row {
     font-size: 1.1rem;
+  }
+
+  .social__links__container {
+    margin: 2rem 0;
+  }
+
+  .social__link {
+    height: 4rem;
+    width: 4rem;
+    margin: 8px;
+    padding: 4px;
   }
 }

@@ -8,12 +8,12 @@ import { DataContext } from "../providers/DataContext";
 import styles from "../styles/HomePage.module.css";
 
 const HomePage = () => {
-  const { launchesUpcoming, launchesPast, starman, starlinkLength } =
+  const { launchesUpcoming, allLaunchesPast, starman, starlinkLength } =
     useContext(DataContext);
   return (
     <div className={styles.main}>
       <HomePageHero upcomingLaunch={launchesUpcoming[0]} />
-      <HomePageLaunches launchesPast={launchesPast} />
+      <HomePageLaunches launchesPast={allLaunchesPast} />
       <HomePageRockets />
       <HomePageStarlink starlinkLength={starlinkLength} />
       <HomePageRoadster data={starman} />

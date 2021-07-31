@@ -173,6 +173,7 @@
 
   .launch__ship {
     margin: 1rem 0;
+    width: 100%;
   }
 
   .launch__ship img {

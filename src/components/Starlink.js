@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   starlink_query_all,
   starlink_query_active,
@@ -91,11 +91,7 @@ const Starlink = () => {
           <p>Satellite Data</p>
           <p>Updated Hourly</p>
         </div>
-        <select
-          name="Query"
-          onChange={handleSelect}
-          className={styles.status__select}
-        >
+        <select name="Query" onChange={handleSelect} className="select">
           <option value="all">All</option>
           <option value="active">Active</option>
           <option value="inactive">Inactive</option>

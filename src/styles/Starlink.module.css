@@ -22,15 +22,6 @@
   color: rgb(190, 192, 196);
 }
 
-.status__select {
-  background: rgb(12, 14, 16);
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  display: block;
-}
-
 .starlink__card {
   margin: 1rem;
   background-color: rgb(12, 14, 16);

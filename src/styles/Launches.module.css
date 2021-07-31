@@ -2,8 +2,17 @@
   font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .launches__latest {
   display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .launches__header p {
+    margin-bottom: 0.7rem;
+  }
 }

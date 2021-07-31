@@ -59,7 +59,9 @@ export const DataProvider = ({ children }) => {
   return (
     <DataContext.Provider
       value={{
-        launchesPast,
+        latestLaunch: launchesPast && launchesPast[0],
+        allLaunchesPast: launchesPast, //All past launch
+        launchesPast: launchesPast && launchesPast.slice(1), //Without the latest launch
         launchesUpcoming,
         rockets,
         starman,

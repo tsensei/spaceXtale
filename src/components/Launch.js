@@ -6,6 +6,7 @@ import { launch_query } from "../queries";
 import unixToLocal from "../utils/unixtolocal";
 import LaunchStatus from "./LaunchStatus";
 import ImageSlider from "./ImageSlider";
+import noimage from "../assets/noimage.png";
 import { ReactComponent as Reddit } from "../assets/reddit.svg";
 import { ReactComponent as Wikipedia } from "../assets/wikipedia.svg";
 import { ReactComponent as Article } from "../assets/article.svg";
@@ -64,7 +65,7 @@ const Launch = () => {
           </div>
         </div>
         <div>
-          <img src={data.links.patch.small} alt="Mission Patch" />
+          <img src={data.links.patch.small || noimage} alt="Mission Patch" />
         </div>
       </div>
       {data.payloads.map((p, i) => {
@@ -73,26 +74,30 @@ const Launch = () => {
       <ImageSlider
         srcArr={data.links.flickr.small.concat(data.links.flickr.original)}
       />
-      <div className={styles.launch__ships}>
-        <div>Recovery Ships</div>
-        <div className={styles.launch__ships__grid}>
-          {data.ships.map((ship) => {
-            return <Ship key={ship.id} data={ship} />;
-          })}
+      {data.ships.length ? (
+        <div className={styles.launch__ships}>
+          <div>Recovery Ships</div>
+          <div className={styles.launch__ships__grid}>
+            {data.ships.map((ship) => {
+              return <Ship key={ship.id} data={ship} />;
+            })}
+          </div>
         </div>
-      </div>
+      ) : null}
 
-      <div className={styles.youtubeWrapper}>
-        <iframe
-          width="560"
-          height="315"
-          src={`https://www.youtube-nocookie.com/embed/${data.links.youtube_id}`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+      {data.links.youtube_id && (
+        <div className={styles.youtubeWrapper}>
+          <iframe
+            width="560"
+            height="315"
+            src={`https://www.youtube-nocookie.com/embed/${data.links.youtube_id}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      )}
       <SocialLinks src={data.links} />
     </div>
   );
@@ -127,34 +132,48 @@ const Payload = ({ data, index }) => (
   <div>
     <div className="bb__table">
       <p className="bb__table__header">Payload #{index + 1}</p>
-      <div className="bb__table__row">
-        <p>Name</p>
-        <p>{data.name}</p>
-      </div>
-      <div className="bb__table__row">
-        <p>Customer</p>
-        <p>{data.customers.join(",")}</p>
-      </div>
-      <div className="bb__table__row">
-        <p>Manufacturers</p>
-        <p>{data.manufacturers.join(",")}</p>
-      </div>
-      <div className="bb__table__row">
-        <p>Mass (kg)</p>
-        <p>{data.mass_kg}</p>
-      </div>
-      <div className="bb__table__row">
-        <p>Nationalities</p>
-        <p>{data.nationalities.join(",")}</p>
-      </div>
-      <div className="bb__table__row">
-        <p>Orbit</p>
-        <p>{data.orbit}</p>
-      </div>
-      <div className="bb__table__row">
-        <p>Type</p>
-        <p>{data.type}</p>
-      </div>
+      {data.name ? (
+        <div className="bb__table__row">
+          <p>Name</p>
+          <p>{data.name}</p>
+        </div>
+      ) : null}
+      {data.customers.length ? (
+        <div className="bb__table__row">
+          <p>Customer</p>
+          <p>{data.customers.join(",")}</p>
+        </div>
+      ) : null}
+      {data.manufacturers.length ? (
+        <div className="bb__table__row">
+          <p>Manufacturers</p>
+          <p>{data.manufacturers.join(",")}</p>
+        </div>
+      ) : null}
+      {data.mass_kg ? (
+        <div className="bb__table__row">
+          <p>Mass (kg)</p>
+          <p>{data.mass_kg}</p>
+        </div>
+      ) : null}
+      {data.nationalities.length ? (
+        <div className="bb__table__row">
+          <p>Nationalities</p>
+          <p>{data.nationalities.join(",")}</p>
+        </div>
+      ) : null}
+      {data.orbit ? (
+        <div className="bb__table__row">
+          <p>Orbit</p>
+          <p>{data.orbit}</p>
+        </div>
+      ) : null}
+      {data.type ? (
+        <div className="bb__table__row">
+          <p>Type</p>
+          <p>{data.type}</p>
+        </div>
+      ) : null}
     </div>
   </div>
 );

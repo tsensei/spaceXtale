@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import unixToLocal from "../utils/unixtolocal";
 import LaunchStatus from "./LaunchStatus";
+import noimage from "../assets/noimage.png";
 import styles from "../styles/LaunchCard.module.css";
 
 const LaunchCard = ({ launchData }) => {
@@ -13,9 +14,11 @@ const LaunchCard = ({ launchData }) => {
           <div className={styles.launch__card__date}>
             {unixToLocal(launchData.date_unix)}
           </div>
-          <div className={styles.launch__card__details}>
-            {launchData.details}
-          </div>
+          {launchData.details && (
+            <div className={styles.launch__card__details}>
+              {launchData.details}
+            </div>
+          )}
         </div>
         <div className={styles.launch__card__status}>
           <div>Status</div>
@@ -28,7 +31,7 @@ const LaunchCard = ({ launchData }) => {
       <div>
         <img
           className={styles.launch__card__patch}
-          src={launchData.links.patch.small}
+          src={launchData.links.patch.small || noimage}
           alt="Mission Patch"
         />
 

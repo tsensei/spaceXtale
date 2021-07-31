@@ -1,15 +1,25 @@
-import React, { useCallback, useContext, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { DataContext } from "../providers/DataContext";
 import LaunchCard from "./LaunchCard";
 import styles from "../styles/Launches.module.css";
 
 const Launches = () => {
-  const page = useRef(1);
+  const [page, setPage] = useState(1);
   const dataPerPage = 5;
-  const { launchesPast, launchesUpcoming } = useContext(DataContext);
+  const { launchesPast, launchesUpcoming, latestLaunch } =
+    useContext(DataContext);
+  const [launchFilter, setLaunchFilter] = useState("past");
+  const [launchData, setLaunchData] = useState(launchesPast); //Store for past/upcoming launch
   const [launchesToShow, setLaunchesToShow] = useState(
-    [...launchesPast].slice(1, dataPerPage + 1)
+    launchData.slice(0, dataPerPage * page)
   );
+  console.log(launchesPast);
   const loader = useCallback((node) => {
     var options = {
       root: null,
@@ -24,35 +34,53 @@ const Launches = () => {
     const observer = new IntersectionObserver(handleObserver, options);
 
     if (node) {
+      console.log("[observing]");
       observer.observe(node);
     }
   }, []);
 
+  useEffect(() => {
+    if (launchFilter === "past") {
+      setLaunchData(launchesPast);
+    } else if (launchFilter === "upcoming") {
+      setLaunchData(launchesUpcoming);
+    }
+  }, [launchFilter]);
+
+  useEffect(() => {
+    setLaunchesToShow(launchData.slice(0, dataPerPage * page));
+  }, [launchData, page]);
+
   const handleObserver = (entities) => {
     const target = entities[0];
     if (target.isIntersecting) {
-      if (launchesToShow.length === launchesPast.length - 1) {
-        return;
-      }
-      page.current = page.current + 1;
-      setLaunchesToShow(() => {
-        return launchesPast.slice(1, dataPerPage * page.current);
-      });
+      setPage((p) => p + 1);
     }
+  };
+
+  const handleSelect = (e) => {
+    setPage(1);
+    setLaunchFilter(e.target.value);
   };
 
   return (
     <div className="container">
       <p className={styles.launches__header}>LATEST LAUNCH</p>
-      <LaunchCard launchData={launchesPast[0]} />
-      <p className={styles.launches__header}>PAST LAUNCHES</p>
+      <LaunchCard launchData={latestLaunch} />
+      <div className={styles.launches__header}>
+        <p>{launchFilter === "past" ? "Past" : "Upcoming"} Launches</p>
+        <select name="Set Launch" className="select" onChange={handleSelect}>
+          <option defaultValue value="past">
+            Past
+          </option>
+          <option value="upcoming">Upcoming</option>
+        </select>
+      </div>
       {launchesToShow.map((i) => {
         return <LaunchCard key={i.flight_number} launchData={i} />;
       })}
       <div className="loader" ref={loader}>
-        {launchesToShow.length !== launchesPast.length - 1 && (
-          <h1>Load More</h1>
-        )}
+        {launchesToShow.length !== launchData.length && <h1>Load More</h1>}
       </div>
     </div>
   );
