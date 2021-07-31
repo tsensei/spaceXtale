@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/spaceXtale/static/css/main.ae0804f2.chunk.css",
-    "main.js": "/spaceXtale/static/js/main.82fecf3a.chunk.js",
-    "main.js.map": "/spaceXtale/static/js/main.82fecf3a.chunk.js.map",
+    "main.css": "/spaceXtale/static/css/main.aadcd326.chunk.css",
+    "main.js": "/spaceXtale/static/js/main.bc3f0f13.chunk.js",
+    "main.js.map": "/spaceXtale/static/js/main.bc3f0f13.chunk.js.map",
     "runtime-main.js": "/spaceXtale/static/js/runtime-main.e9d6237d.js",
     "runtime-main.js.map": "/spaceXtale/static/js/runtime-main.e9d6237d.js.map",
-    "static/js/2.6a825509.chunk.js": "/spaceXtale/static/js/2.6a825509.chunk.js",
-    "static/js/2.6a825509.chunk.js.map": "/spaceXtale/static/js/2.6a825509.chunk.js.map",
+    "static/js/2.278e1b96.chunk.js": "/spaceXtale/static/js/2.278e1b96.chunk.js",
+    "static/js/2.278e1b96.chunk.js.map": "/spaceXtale/static/js/2.278e1b96.chunk.js.map",
     "index.html": "/spaceXtale/index.html",
-    "static/css/main.ae0804f2.chunk.css.map": "/spaceXtale/static/css/main.ae0804f2.chunk.css.map",
-    "static/js/2.6a825509.chunk.js.LICENSE.txt": "/spaceXtale/static/js/2.6a825509.chunk.js.LICENSE.txt",
+    "static/css/main.aadcd326.chunk.css.map": "/spaceXtale/static/css/main.aadcd326.chunk.css.map",
+    "static/js/2.278e1b96.chunk.js.LICENSE.txt": "/spaceXtale/static/js/2.278e1b96.chunk.js.LICENSE.txt",
     "static/media/article.b01cbaaf.svg": "/spaceXtale/static/media/article.b01cbaaf.svg",
     "static/media/failed.e8fbabf9.svg": "/spaceXtale/static/media/failed.e8fbabf9.svg",
     "static/media/HomePageHero.module.css": "/spaceXtale/static/media/hero-bg.86637811.jpg",
     "static/media/HomePageLaunches.module.css": "/spaceXtale/static/media/launches-bg.c086fb73.jpg",
     "static/media/left-arrow.6dbad60c.svg": "/spaceXtale/static/media/left-arrow.6dbad60c.svg",
+    "static/media/noimage.66f924fc.png": "/spaceXtale/static/media/noimage.66f924fc.png",
     "static/media/presskit.f83d3592.svg": "/spaceXtale/static/media/presskit.f83d3592.svg",
     "static/media/recovered.b7254d04.svg": "/spaceXtale/static/media/recovered.b7254d04.svg",
     "static/media/reddit.582de513.svg": "/spaceXtale/static/media/reddit.582de513.svg",
@@ -24,12 +25,13 @@
     "static/media/HomePageRockets.module.css": "/spaceXtale/static/media/rockets-bg.d49864a7.jpg",
     "static/media/HomePageStarlink.module.css": "/spaceXtale/static/media/starlink-bg.81aeb97c.jpeg",
     "static/media/success.7af2a10e.svg": "/spaceXtale/static/media/success.7af2a10e.svg",
+    "static/media/upcoming.7b60e6ce.svg": "/spaceXtale/static/media/upcoming.7b60e6ce.svg",
     "static/media/wikipedia.8655f965.svg": "/spaceXtale/static/media/wikipedia.8655f965.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e9d6237d.js",
-    "static/js/2.6a825509.chunk.js",
-    "static/css/main.ae0804f2.chunk.css",
-    "static/js/main.82fecf3a.chunk.js"
+    "static/js/2.278e1b96.chunk.js",
+    "static/css/main.aadcd326.chunk.css",
+    "static/js/main.bc3f0f13.chunk.js"
   ]
 }
