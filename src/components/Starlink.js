@@ -39,7 +39,6 @@ const Starlink = () => {
         body: JSON.stringify(query((page - 1) * dataPerPage, dataPerPage)),
       });
       const result = await res.json();
-      console.log(result);
       setStarlinkData((d) => [...d, ...result.docs]);
     })();
   }, [page]);

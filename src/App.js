@@ -11,6 +11,7 @@ import Starlink from "./components/Starlink";
 import Rockets from "./components/Rockets";
 import Rocket from "./components/Rocket";
 import Roadster from "./components/Roadster";
+import Info from "./components/Info";
 
 const App = () => {
   const data = useContext(DataContext);
@@ -51,6 +52,9 @@ const App = () => {
         </Route>
         <Route exact path="/roadster">
           <Roadster />
+        </Route>
+        <Route path="/info">
+          <Info />
         </Route>
         <Route>
           <h1>Unknown Endpoint</h1>

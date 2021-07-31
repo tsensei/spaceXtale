@@ -10,7 +10,6 @@ const Rocket = () => {
   const { id } = useParams();
   const [data] = useState(rockets.find((r) => r.id === id));
   const [tableFilter, setTableFilter] = useState("overview");
-  console.log(data);
 
   const handleFilterChange = (e) => {
     setTableFilter(e.target.value);

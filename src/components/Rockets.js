@@ -5,7 +5,6 @@ import styles from "../styles/Rockets.module.css";
 
 const Rockets = () => {
   const { rockets } = useContext(DataContext);
-  console.log(rockets);
 
   return (
     <div className="container">

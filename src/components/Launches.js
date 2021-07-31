@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { DataContext } from "../providers/DataContext";
 import LaunchCard from "./LaunchCard";
 import styles from "../styles/Launches.module.css";

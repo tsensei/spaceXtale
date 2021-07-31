@@ -18,9 +18,6 @@ const Launch = () => {
   const [data, setData] = useState(null);
   const { id } = useParams();
   useEffect(() => {
-    console.log(data);
-  }, [data]);
-  useEffect(() => {
     (async () => {
       const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
         method: "POST",
@@ -158,44 +155,58 @@ const SocialLinks = ({ src }) => (
   <div className="social__links__container">
     {src.reddit.campaign && (
       <a className="social__link" href={src.reddit.campaign}>
-        <Reddit />
-        Campaign
+        <div>
+          <Reddit />
+        </div>
+        <div>Campaign</div>
       </a>
     )}
     {src.reddit.launch && (
       <a className="social__link" href={src.reddit.launch}>
-        <Reddit />
-        Launch
+        <div>
+          <Reddit />
+        </div>
+        <div>Launch</div>
       </a>
     )}
     {src.reddit.media && (
       <a className="social__link" href={src.reddit.media}>
-        <Reddit />
-        Media
+        <div>
+          <Reddit />
+        </div>
+        <div>Media</div>
       </a>
     )}
     {src.reddit.recovery && (
       <a className="social__link" href={src.reddit.recovery}>
-        <Reddit />
-        Recovery
+        <div>
+          <Reddit />
+        </div>
+        <div>Recovery</div>
       </a>
     )}
     {src.presskit && (
       <a href={src.presskit} className="social__link">
-        <Presskit />
-        Presskit
+        <div>
+          <Presskit />
+        </div>
+        <div>Presskit</div>
       </a>
     )}
     {src.article && (
       <a href={src.article} className="social__link">
-        <Article />
-        Article
+        <div>
+          <Article />
+        </div>
+        <div>Article</div>
       </a>
     )}
     {src.wikipedia && (
       <a href={src.wikipedia} className="social__link">
-        <Wikipedia />
-        Wikipedia
+        <div>
+          <Wikipedia />
+        </div>
+        <div>Wikipedia</div>
       </a>
     )}
   </div>

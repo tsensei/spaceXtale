@@ -8,12 +8,11 @@ import styles from "../styles/Roadster.module.css";
 
 const Roadster = () => {
   const { roadster } = useContext(DataContext);
-  console.log(roadster);
   return (
     <div className="container">
       <div className={styles.roadster__description}>
         <p>{roadster.name}</p>
-        <p>Launched:{unixToLocal(roadster.launch_date_unix)}</p>
+        <p>Launched : {unixToLocal(roadster.launch_date_unix)}</p>
         <p>{roadster.details}</p>
       </div>
       <div className="bb__table">
@@ -78,8 +77,10 @@ const Roadster = () => {
       </div>
       <div className="social__links__container">
         <a className="social__link" href={roadster.wikipedia}>
-          <Wikipedia />
-          Wikipedia
+          <div>
+            <Wikipedia />
+          </div>
+          <div>Wikipedia</div>
         </a>
       </div>
     </div>

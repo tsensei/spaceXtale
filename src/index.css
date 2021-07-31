@@ -133,17 +133,15 @@ a {
 }
 
 .social__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 6rem;
-  width: 6rem;
   margin: 1rem;
   padding: 0.5rem;
   color: white;
   border-radius: 1rem;
   transition: all 400ms;
   font-weight: 300;
+  padding: 1rem;
+  min-width: 6.5rem;
+  text-align: center;
 }
 
 .social__link:hover {
@@ -152,6 +150,8 @@ a {
 
 .social__link svg {
   margin-bottom: 4px;
+  height: 3rem;
+  width: 3rem;
 }
 
 .status {
@@ -233,7 +233,7 @@ select {
 }
 @media screen and (max-width: 800px) {
   .container {
-    padding: 10rem 1rem;
+    padding: 8rem 1rem 4rem 1rem;
   }
 
   .toolTipText {
@@ -262,9 +262,13 @@ select {
   }
 
   .social__link {
-    height: 4rem;
-    width: 4rem;
     margin: 8px;
-    padding: 4px;
+    padding: 16px;
+    min-width: 0;
+  }
+
+  .social__link svg {
+    height: 2rem;
+    width: 2rem;
   }
 }
