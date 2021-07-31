@@ -2,6 +2,9 @@
   display: flex;
   font-weight: 300;
   margin-bottom: 2rem;
+  background-color: rgb(12, 14, 16);
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
 .launch__hero > div:nth-child(1) {
