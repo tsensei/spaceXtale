@@ -1,7 +1,7 @@
 .nav__main {
   width: 100%;
   position: absolute;
-  z-index: 50;
+  z-index: 90;
   font-size: 2rem;
   font-weight: 100;
   display: flex;
@@ -13,7 +13,7 @@
 .nav__logo {
   font-size: 3rem;
   position: absolute;
-  z-index: 100;
+  z-index: 80;
   font-weight: 100;
   padding: 1.5rem 2rem;
 }
@@ -106,7 +106,7 @@
     outline: none;
     border: none;
     border-radius: 2rem;
-    z-index: 70;
+    z-index: 90;
   }
 
   .nav__toggler svg {

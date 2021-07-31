@@ -128,52 +128,28 @@ const Ship = ({ data }) => (
   </div>
 );
 
+const TableRow = ({ title, content }) => {
+  if (!content) return null;
+  if (typeof content === "string" && content.includes("null")) return null;
+  return (
+    <div className="bb__table__row">
+      <p>{title}</p>
+      <p>{content}</p>
+    </div>
+  );
+};
+
 const Payload = ({ data, index }) => (
   <div>
     <div className="bb__table">
       <p className="bb__table__header">Payload #{index + 1}</p>
-      {data.name ? (
-        <div className="bb__table__row">
-          <p>Name</p>
-          <p>{data.name}</p>
-        </div>
-      ) : null}
-      {data.customers.length ? (
-        <div className="bb__table__row">
-          <p>Customer</p>
-          <p>{data.customers.join(",")}</p>
-        </div>
-      ) : null}
-      {data.manufacturers.length ? (
-        <div className="bb__table__row">
-          <p>Manufacturers</p>
-          <p>{data.manufacturers.join(",")}</p>
-        </div>
-      ) : null}
-      {data.mass_kg ? (
-        <div className="bb__table__row">
-          <p>Mass (kg)</p>
-          <p>{data.mass_kg}</p>
-        </div>
-      ) : null}
-      {data.nationalities.length ? (
-        <div className="bb__table__row">
-          <p>Nationalities</p>
-          <p>{data.nationalities.join(",")}</p>
-        </div>
-      ) : null}
-      {data.orbit ? (
-        <div className="bb__table__row">
-          <p>Orbit</p>
-          <p>{data.orbit}</p>
-        </div>
-      ) : null}
-      {data.type ? (
-        <div className="bb__table__row">
-          <p>Type</p>
-          <p>{data.type}</p>
-        </div>
-      ) : null}
+      <TableRow title="Name" content={data.name} />
+      <TableRow title="Type" content={data.number} />
+      <TableRow title="Customer" content={data.customers.join(",")} />
+      <TableRow title="Manufacturers" content={data.manufacturers.join(",")} />
+      <TableRow title="Mass (kg)" content={data.mass_kg} />
+      <TableRow title="Nationalities" content={data.nationalities.join(",")} />
+      <TableRow title="Orbit" content={data.type} />
     </div>
   </div>
 );

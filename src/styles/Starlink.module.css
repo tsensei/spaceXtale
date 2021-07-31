@@ -91,6 +91,10 @@
     align-items: flex-start;
   }
 
+  .starlink__select__header div {
+    margin-bottom: 1rem;
+  }
+
   .status__select {
     margin: 1rem 0;
   }

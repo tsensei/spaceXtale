@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ReactComponent as LeftArrow } from "../assets/left-arrow.svg";
 import { ReactComponent as RightArrow } from "../assets/right-arrow.svg";
 import styles from "../styles/ImageSlider.module.css";
 
 const ImageSlider = ({ srcArr }) => {
-  // console.log(srcArr);
   const [index, setIndex] = useState(0);
-  useEffect(() => {
-    console.log(index);
-  }, [index]);
 
   const handleClick = (operation) => {
     setIndex((index) => index + operation);

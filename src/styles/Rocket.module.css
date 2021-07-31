@@ -1,0 +1,52 @@
+.rocket__description > p:nth-child(1) {
+  font-size: 3rem;
+  color: rgb(0, 111, 185);
+  margin-bottom: 0.5rem;
+}
+
+.rocket__description p span:first-child {
+  color: rgb(190, 192, 196);
+}
+
+.rocket__description > p:nth-child(2),
+.rocket__description > p:nth-child(3),
+.rocket__description > p:nth-child(4),
+.rocket__description > p:nth-child(5) {
+  font-size: 1.2rem;
+}
+
+.rocket__description > p:nth-child(6) {
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
+  color: rgb(190, 192, 196);
+}
+
+.active,
+.inactive {
+  font-weight: 800;
+}
+
+.active {
+  color: #46ac5e;
+}
+
+.inactive {
+  color: red;
+}
+
+@media screen and (max-width: 800px) {
+  .rocket__description > p:nth-child(1) {
+    font-size: 2rem;
+  }
+
+  .rocket__description > p:nth-child(2),
+  .rocket__description > p:nth-child(3),
+  .rocket__description > p:nth-child(4),
+  .rocket__description > p:nth-child(5) {
+    font-size: 1.1rem;
+  }
+
+  .rocket__description > p:nth-child(6) {
+    font-size: 1.2rem;
+  }
+}

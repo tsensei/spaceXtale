@@ -19,7 +19,6 @@ const Launches = () => {
   const [launchesToShow, setLaunchesToShow] = useState(
     launchData.slice(0, dataPerPage * page)
   );
-  console.log(launchesPast);
   const loader = useCallback((node) => {
     var options = {
       root: null,
@@ -34,7 +33,6 @@ const Launches = () => {
     const observer = new IntersectionObserver(handleObserver, options);
 
     if (node) {
-      console.log("[observing]");
       observer.observe(node);
     }
   }, []);
