@@ -25,7 +25,7 @@ const Info = () => {
           wouldn't have been possible . The source code for this project can be
           found at my{" "}
           <a href="https://github.com/tsensei/spaceXtale/tree/main">
-            Github Repo
+            Github Repository
           </a>
           .
         </p>
