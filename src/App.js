@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Starlink from "./components/Starlink";
 import Rockets from "./components/Rockets";
 import Rocket from "./components/Rocket";
+import Roadster from "./components/Roadster";
 
 const App = () => {
   const data = useContext(DataContext);
@@ -18,7 +19,7 @@ const App = () => {
     !data.launchesPast ||
     !data.launchesUpcoming ||
     !data.rockets ||
-    !data.starman ||
+    !data.roadster ||
     !data.starlinkLength
   ) {
     return <Loading />;
@@ -49,7 +50,7 @@ const App = () => {
           <Starlink />
         </Route>
         <Route exact path="/roadster">
-          <h1>Roadster</h1>
+          <Roadster />
         </Route>
         <Route>
           <h1>Unknown Endpoint</h1>

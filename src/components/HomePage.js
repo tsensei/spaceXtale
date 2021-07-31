@@ -8,7 +8,7 @@ import { DataContext } from "../providers/DataContext";
 import styles from "../styles/HomePage.module.css";
 
 const HomePage = () => {
-  const { launchesUpcoming, allLaunchesPast, starman, starlinkLength } =
+  const { launchesUpcoming, allLaunchesPast, roadster, starlinkLength } =
     useContext(DataContext);
   return (
     <div className={styles.main}>
@@ -16,7 +16,7 @@ const HomePage = () => {
       <HomePageLaunches launchesPast={allLaunchesPast} />
       <HomePageRockets />
       <HomePageStarlink starlinkLength={starlinkLength} />
-      <HomePageRoadster data={starman} />
+      <HomePageRoadster data={roadster} />
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Rocket = () => {
   const { rockets } = useContext(DataContext);
   const { id } = useParams();
   const [data] = useState(rockets.find((r) => r.id === id));
-  const [tableFilter, setTableFilter] = useState("firstStage");
+  const [tableFilter, setTableFilter] = useState("overview");
   console.log(data);
 
   const handleFilterChange = (e) => {
@@ -101,7 +101,7 @@ const Rocket = () => {
   );
 };
 
-const TableRow = ({ title, content }) => {
+export const TableRow = ({ title, content }) => {
   if (!content) return null;
   if (typeof content === "string" && content.includes("null")) return null;
   return (

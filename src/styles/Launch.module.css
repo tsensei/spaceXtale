@@ -119,20 +119,6 @@
   border-top-right-radius: 1rem;
 }
 
-.youtubeWrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-}
-
-.youtubeWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 @media screen and (max-width: 800px) {
   .launch__hero {
     flex-direction: column-reverse;

@@ -1,0 +1,25 @@
+.roadster__description > p:nth-child(1) {
+  font-size: 3rem;
+  color: rgb(0, 111, 185);
+  margin-bottom: 0.3rem;
+}
+
+.roadster__description > p:nth-child(2),
+.roadster__description > p:nth-child(3) {
+  color: rgb(192, 194, 196);
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .roadster__description > p:nth-child(1) {
+    font-size: 2.3rem;
+  }
+
+  .roadster__description > p:nth-child(2),
+  .roadster__description > p:nth-child(3) {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    line-height: 1.3;
+  }
+}

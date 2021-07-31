@@ -86,7 +86,7 @@ const Launch = () => {
       ) : null}
 
       {data.links.youtube_id && (
-        <div className={styles.youtubeWrapper}>
+        <div className="youtubeWrapper">
           <iframe
             width="560"
             height="315"

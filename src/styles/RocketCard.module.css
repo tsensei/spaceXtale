@@ -7,6 +7,10 @@
   min-height: 20rem;
 }
 
+.rocket__card:hover .rocket__card__data {
+  filter: brightness(125%);
+}
+
 .rocket__card__image {
   /* height: 20rem; */
   width: 20rem;
@@ -23,6 +27,7 @@
   display: flex;
   flex: 1;
   padding: 1rem 2rem;
+  transition: all 300ms ease-in-out;
 }
 
 .rocket__card__description {

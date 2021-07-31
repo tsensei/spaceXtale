@@ -6,7 +6,7 @@ export const DataProvider = ({ children }) => {
   const [launchesPast, setLaunchesPast] = useState(null);
   const [launchesUpcoming, setLaunchesUpcoming] = useState(null);
   const [rockets, setRockets] = useState(null);
-  const [starman, setStarman] = useState(null);
+  const [roadster, setRoadster] = useState(null);
   const [starlinkLength, setStarlinkLength] = useState(null);
 
   useEffect(() => {
@@ -25,11 +25,11 @@ export const DataProvider = ({ children }) => {
         await fetch("https://api.spacexdata.com/v4/rockets")
       ).json();
 
-      const starmanResponse = await fetch(
+      const roadsterResponse = await fetch(
         "https://api.spacexdata.com/v4/roadster/"
       );
 
-      const starmanData = await starmanResponse.json();
+      const roadsterData = await roadsterResponse.json();
 
       const starlinkQueryResponse = await fetch(
         "https://api.spacexdata.com/v4/starlink/query",
@@ -51,7 +51,7 @@ export const DataProvider = ({ children }) => {
       setLaunchesPast(lpData.reverse());
       setLaunchesUpcoming(luData);
       setRockets(rData);
-      setStarman(starmanData);
+      setRoadster(roadsterData);
       setStarlinkLength(starlinkData.totalDocs);
     })();
   }, []);
@@ -64,7 +64,7 @@ export const DataProvider = ({ children }) => {
         launchesPast: launchesPast && launchesPast.slice(1), //Without the latest launch
         launchesUpcoming,
         rockets,
-        starman,
+        roadster,
         starlinkLength,
         launchesAll:
           launchesPast && launchesUpcoming
