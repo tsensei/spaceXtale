@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/spaceXtale/static/css/main.78d6cd11.chunk.css",
-    "main.js": "/spaceXtale/static/js/main.c28bd971.chunk.js",
-    "main.js.map": "/spaceXtale/static/js/main.c28bd971.chunk.js.map",
+    "main.js": "/spaceXtale/static/js/main.2c0fa97d.chunk.js",
+    "main.js.map": "/spaceXtale/static/js/main.2c0fa97d.chunk.js.map",
     "runtime-main.js": "/spaceXtale/static/js/runtime-main.e9d6237d.js",
     "runtime-main.js.map": "/spaceXtale/static/js/runtime-main.e9d6237d.js.map",
     "static/js/2.691cc046.chunk.js": "/spaceXtale/static/js/2.691cc046.chunk.js",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.e9d6237d.js",
     "static/js/2.691cc046.chunk.js",
     "static/css/main.78d6cd11.chunk.css",
-    "static/js/main.c28bd971.chunk.js"
+    "static/js/main.2c0fa97d.chunk.js"
   ]
 }
