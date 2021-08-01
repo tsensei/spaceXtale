@@ -48,6 +48,8 @@ export const DataProvider = ({ children }) => {
 
       const starlinkData = await starlinkQueryResponse.json();
 
+      fetch("https://ancient-wildwood-93589.herokuapp.com/spaceXtale"); //Visitor Counter
+
       setLaunchesPast(lpData.reverse());
       setLaunchesUpcoming(luData);
       setRockets(rData);
