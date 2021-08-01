@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spaceXtale/static/css/main.3ae810d3.chunk.css",
+    "main.css": "/spaceXtale/static/css/main.78d6cd11.chunk.css",
     "main.js": "/spaceXtale/static/js/main.c28bd971.chunk.js",
     "main.js.map": "/spaceXtale/static/js/main.c28bd971.chunk.js.map",
     "runtime-main.js": "/spaceXtale/static/js/runtime-main.e9d6237d.js",
@@ -8,7 +8,7 @@
     "static/js/2.691cc046.chunk.js": "/spaceXtale/static/js/2.691cc046.chunk.js",
     "static/js/2.691cc046.chunk.js.map": "/spaceXtale/static/js/2.691cc046.chunk.js.map",
     "index.html": "/spaceXtale/index.html",
-    "static/css/main.3ae810d3.chunk.css.map": "/spaceXtale/static/css/main.3ae810d3.chunk.css.map",
+    "static/css/main.78d6cd11.chunk.css.map": "/spaceXtale/static/css/main.78d6cd11.chunk.css.map",
     "static/js/2.691cc046.chunk.js.LICENSE.txt": "/spaceXtale/static/js/2.691cc046.chunk.js.LICENSE.txt",
     "static/media/article.b01cbaaf.svg": "/spaceXtale/static/media/article.b01cbaaf.svg",
     "static/media/failed.e8fbabf9.svg": "/spaceXtale/static/media/failed.e8fbabf9.svg",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.e9d6237d.js",
     "static/js/2.691cc046.chunk.js",
-    "static/css/main.3ae810d3.chunk.css",
+    "static/css/main.78d6cd11.chunk.css",
     "static/js/main.c28bd971.chunk.js"
   ]
 }
