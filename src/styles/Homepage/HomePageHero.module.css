@@ -31,6 +31,7 @@
 .heroContent__header {
   font-size: 4rem;
   font-weight: 100;
+  line-height: 1.4;
 }
 
 .heroContent__header span {
@@ -41,6 +42,10 @@
   .hero {
     min-height: 100vh;
     padding: 0 1rem;
+  }
+
+  .hero::before {
+    background: rgba(0, 0, 0, 0.6);
   }
   .heroContent {
     height: 45vh;

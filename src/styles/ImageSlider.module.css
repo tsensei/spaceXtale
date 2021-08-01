@@ -74,4 +74,8 @@
     width: 100%;
     height: 60vh;
   }
+
+  .slider__controls__buttons {
+    padding: 0 1rem;
+  }
 }

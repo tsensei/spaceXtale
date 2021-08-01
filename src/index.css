@@ -68,7 +68,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .btn {
@@ -262,6 +262,10 @@ select {
     padding: 8rem 1rem 4rem 1rem;
   }
 
+  .bg-overlay::before {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
   .homepage__content {
     padding: 0 1rem;
     font-weight: 300;
@@ -286,6 +290,7 @@ select {
   .btn {
     padding: 12px 18px;
     border: 1px solid white;
+    font-weight: 300;
   }
 
   .bb__table {
