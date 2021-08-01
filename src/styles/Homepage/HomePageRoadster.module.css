@@ -2,22 +2,12 @@
   background-image: url("../../assets/roadster-bg.jpg");
 }
 
-.roadster__content {
-  z-index: 1;
-  padding: 0 10rem;
-}
-
-.roadster__content p:nth-child(1) {
-  font-size: 4rem;
-  margin: 2rem 0;
-}
-
-.roadster__content p:nth-child(2) {
+.main p:nth-child(2) {
   font-size: 2rem;
   margin: 1rem 0 2rem 0;
 }
 
-.roadster__content span {
+.main span {
   border-bottom: 2px solid rgb(0, 111, 185);
 }
 
@@ -32,26 +22,9 @@
   left: 0;
 }
 
-@media screen and (max-width: 1000px) {
-  .roadster__content {
-    padding: 2rem;
-  }
-}
-
 @media screen and (max-width: 800px) {
-  .roadster__content {
-    padding: 0 1rem;
-    font-weight: 300;
-  }
-
-  .roadster__content p:nth-child(1) {
-    font-size: 2.5rem;
-    margin: 2rem 0;
-  }
-
-  .roadster__content p:nth-child(2) {
+  .main p:nth-child(2) {
     font-size: 1.6rem;
     margin: 2rem 0;
-    line-height: 1.3;
   }
 }

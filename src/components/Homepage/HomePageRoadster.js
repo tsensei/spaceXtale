@@ -6,8 +6,8 @@ const HomePageRoadster = ({ data }) => {
   const distance = data ? Math.round(data.earth_distance_km) : 0;
   return (
     <div className={styles.main + " bg-overlay"}>
-      <div className={styles.roadster__content}>
-        <p>Starman and his Roadster</p>
+      <div className="homepage__content">
+        <p className="homepage__header">Starman and his Roadster</p>
         <p>
           <span>{distance}</span> kms from the Earth and moving away
         </p>

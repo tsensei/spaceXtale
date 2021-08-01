@@ -8,11 +8,11 @@ const HomePageLaunches = ({ launchesPast }) => {
   const nEff = Math.round((nSuccess / nPast) * 100);
   return (
     <div className={styles.main + " bg-overlay"}>
-      <div className={styles.launches__content}>
-        <p>Launches</p>
-        <p>Total Launches : {nPast}</p>
-        <p>Successful Launches : {nSuccess}</p>
-        <p>
+      <div className="homepage__content">
+        <p className="homepage__header">Launches</p>
+        <p className="homepage__subheader">Total Launches : {nPast}</p>
+        <p className="homepage__subheader">Successful Launches : {nSuccess}</p>
+        <p className="homepage__subtitle">
           Revolutionizing space flight with an efficiency of {nEff}% since 2006
         </p>
         <Link to="/launches" className={styles.launches__button + " btn"}>
